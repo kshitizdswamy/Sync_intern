@@ -17,7 +17,7 @@ def clear():
         widget.destroy()
     yi -=50
 
-def send(event):
+def send():
     global yi
     user_ent=entry.get()
     use=Label(text,width=51,text="You >> "+user_ent,font="times 12", bg="chartreuse3",anchor="e")
@@ -78,8 +78,7 @@ entry=Entry(root,font="times 15 ")
 entry.place(x=10,y=429,width=400,height=50)
 
 #send_button
-btn = Button(root,text="Send",font="arial 15 bold",bg="green",highlightbackground="green")
-root.bind("<Return>",send)
+btn = Button(root,text="Send",font="arial 15 bold",bg="green",highlightbackground="green",command=send)
 btn.place(x=420,y=430,height=50)
 
 #credits
